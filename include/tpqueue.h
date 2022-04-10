@@ -12,7 +12,7 @@ class TPQueue {
  public:
     TPQueue() : first(0), last(0) {}
     void push(T x) {
-        if (getSize() >= size)
+        if ((last - first) >= size)
             throw std::string("Full!");
         } else {
             int k = last++;
@@ -35,6 +35,7 @@ class TPQueue {
         return arr[(last - 1) % size];
     }
 };
+
 struct SYM {
   char ch;
   int prior;
