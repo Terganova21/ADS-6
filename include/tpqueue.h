@@ -6,7 +6,7 @@
 template<typename T, int size>
 class TPQueue {
  private:
-    T arr[500];
+    T arr[100];
     int first;
     int last;
  public:
