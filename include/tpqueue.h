@@ -9,8 +9,8 @@ class TPQueue {
     T arr[100];
     int first;
     int last;
-    
-public:
+
+ public:
     TPQueue() : first(0), last(0) {}
     void push(T x) {
         if ((last - first) >= size) {
