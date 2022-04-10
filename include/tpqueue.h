@@ -1,10 +1,11 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
+#include <string>
 
 template<typename T, int size>
 class TPQueue {
-private:
+ private:
     T arr[size];
     int first;
     int last;
@@ -13,7 +14,7 @@ private:
     void push(T x) {
         if (getSize() >= size)
             throw std::string("Full!");
-        else {
+        } else {
             int k = last++;
             while ((--k >= first) && (arr[k % size].prior < x.prior)) {
                 arr[(k + 1) % size] = arr[k % size];
